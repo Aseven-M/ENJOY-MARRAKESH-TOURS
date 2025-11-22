@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-translate="page_title">Enjoy Marrakech Tours - Découvrez le Maroc authentique</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#24441B',
+            secondary: '#E4DFD8',
+            accent: '#F2D04E',    
+          },
+          boxShadow: {
+            'feature': '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+            'card': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+          },
+          borderRadius: {
+            'xll': '1.5rem'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+    }
+    /* HERO SECTION */
+    .hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/backg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+    .navbar-scrolled {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      border-radius: 1.5rem;
+    }
+    .navbar-default {
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(5px);
+      border-radius: 1.5rem;
+    }
+    /* HOOVER ECCENTRIC ANIMATIONS FOR SECTIONS */
+    .feature-card, .tour-card, .stats-card {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .feature-card:hover,
+    .tour-card:hover,
+    .stats-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+    }
+    .testimonial-card {
+      transition: transform 0.3s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+    /* CTA Section - subtle scale on hover */
+    .cta-section a {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cta-section a:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px -5px rgba(0,0,0,0.2);
+    }
+    /* Additional Enhancements for Section Headings */
+    h2 {
+      position: relative;
+      display: inline-block;
+    }
+    h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 50%;
+      height: 3px;
+      background: #F2D04E;
+      border-radius: 2px;
+    }
+    /* Language Switcher Styles */
+    .language-switcher .language-options {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    .language-switcher:hover .language-options {
+      opacity: 1;
+      visibility: visible;
+    }
+    #mobile-language-options {
+      display: none;
+    }
+    #mobile-language-options.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+ <nav id="navbar" class="navbar-default fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+              <img src="images/logo.png" class="h-16 w-auto" alt="Enjoy Marrakech Tours">
+            </a>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-6">
+              <a href="index.html"
+                 class="nav-link text-primary font-medium hover:text-accent transition-colors flex items-center group" data-translate="nav_home">
+                Accueil
+              </a>
+              <a href="about.html"
+                 class="nav-link text-primary font-medium hover:text-accent transition-colors flex items-center group" data-translate="nav_about">
+                À propos
+              </a>
+              <!-- Packages Dropdown -->
+              <div class="relative group">
+                <button class="nav-link text-primary font-medium flex items-center hover:text-accent" data-translate="nav_packages">
+                  Packages
+                </button>
+                <div
+                  class="absolute left-0 mt-3 w-52 bg-white rounded-xl shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-accent/20">
+                  <a href="tours/marrakech.html"
+                     class="block px-5 py-3 text-gray-700 hover:bg-accent/10 transition-colors hover:text-accent" data-translate="from_marrakech">
+                    From Marrakech
+                  </a>
+                  <a href="tours/fes.html"
+                     class="block px-5 py-3 text-gray-700 hover:bg-accent/10 transition-colors hover:text-accent" data-translate="from_fes">
+                    From Fes
+                  </a>
+                  <a href="#"
+                     class="block px-5 py-3 text-gray-700 hover:bg-accent/10 transition-colors hover:text-accent" data-translate="from_casablanca">
+                    From Casablanca
+                  </a>
+                </div>
+              </div>
+              <a href="galery.html"
+                 class="nav-link text-primary font-medium hover:text-accent transition-colors flex items-center group" data-translate="nav_gallery">
+                Galerie
+              </a>
+              <!-- Language Switcher -->
+              <div class="language-switcher relative group">
+                <button
+                  class="language-btn flex items-center text-primary hover:text-accent">
+                  <i class="fas fa-globe mr-2 text-accent"></i>
+                  <span class="current-language font-semibold">FR</span>
+                </button>
+                <div
+                  class="language-options absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-xl py-1 border border-accent/20">
+                  <div class="language-option active px-4 py-2 cursor-pointer hover:bg-accent/10" data-lang="fr">
+                    <img src="https://flagcdn.com/w20/fr.png" class="inline mr-2" alt="French">
+                    Français
+                  </div>
+                  <div class="language-option px-4 py-2 cursor-pointer hover:bg-accent/10" data-lang="en">
+                    <img src="https://flagcdn.com/w20/us.png" class="inline mr-2" alt="English">
+                    English
+                  </div>
+                  <div class="language-option px-4 py-2 cursor-pointer hover:bg-accent/10" data-lang="es">
+                    <img src="https://flagcdn.com/w20/es.png" class="inline mr-2" alt="Spanish">
+                    Español
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Contact / Mobile Menu Button -->
+            <div>
+              <a href="contact.html"
+                 class="hidden md:block bg-accent text-white px-6 py-3 rounded-lg font-medium hover:bg-accent/90 transition-all shadow-md hover:shadow-accent/50" data-translate="nav_contact">
+                <i class="fas fa-phone mr-2"></i>Contact US
+              </a>
+              <button id="mobile-menu-button" class="md:hidden text-primary text-2xl">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-3">
+          <div class="flex flex-col space-y-3 px-4 pb-4 bg-white/95 backdrop-blur-sm rounded-lg mx-4">
+            <a href="index.html"
+               class="text-primary font-medium py-3 flex items-center border-b border-accent/20" data-translate="nav_home_mobile">
+              <i class="fas fa-home mr-3 text-accent"></i>Accueil
+            </a>
+            <a href="about.html"
+               class="text-primary font-medium py-3 flex items-center border-b border-accent/20" data-translate="nav_about_mobile">
+              <i class="fas fa-info-circle mr-3 text-accent"></i>À propos
+            </a>
+            <!-- Mobile Tours Dropdown -->
+            <div class="mobile-tours-dropdown">
+              <button id="mobile-tours-button"
+                class="text-primary font-medium py-3 flex items-center justify-between w-full border-b border-accent/20">
+                <span class="flex items-center">
+                  <i class="fas fa-route mr-3 text-accent"></i><span data-translate="nav_tours">Tours</span>
+                </span>
+                <i class="fas fa-chevron-down text-xs"></i>
+              </button>
+              <div id="mobile-tours-content" class="pl-7 mt-2 hidden dropdown-content">
+                <a href="/tours/marrakech.html"
+                   class="block py-2 text-gray-600 hover:text-accent" data-translate="from_marrakech">From Marrakech</a>
+                <a href="/tours/fes.html"
+                   class="block py-2 text-gray-600 hover:text-accent" data-translate="from_fes">From Fes</a>
+                <a href="/tours/casablanca.html"
+                   class="block py-2 text-gray-600 hover:text-accent" data-translate="from_casablanca">From Casablanca</a>
+              </div>
+            </div>
+            <a href="galery.html"
+               class="text-primary font-medium py-3 flex items-center border-b border-accent/20" data-translate="nav_gallery_mobile">
+              <i class="fas fa-image mr-3 text-accent"></i>Galerie
+            </a>
+            <!-- Mobile Language -->
+            <div class="language-switcher mt-3 py-2 border-t border-accent/20">
+              <button id="mobile-language-button" class="language-btn w-full justify-center text-primary flex items-center">
+                <i class="fas fa-globe mr-2 text-accent"></i>
+                <span class="current-language font-semibold">FR</span>
+                <i class="fas fa-chevron-down ml-2 text-xs"></i>
+              </button>
+              <div id="mobile-language-options" class="language-options mt-2">
+                <div class="language-option active p-2 hover:bg-accent/10 cursor-pointer" data-lang="fr">
+                  <img src="https://flagcdn.com/w20/fr.png" class="inline mr-2" alt="French">
+                  Français
+                </div>
+                <div class="language-option p-2 hover:bg-accent/10 cursor-pointer" data-lang="en">
+                  <img src="https://flagcdn.com/w20/us.png" class="inline mr-2" alt="English">
+                  English
+                </div>
+                <div class="language-option p-2 hover:bg-accent/10 cursor-pointer" data-lang="es">
+                  <img src="https://flagcdn.com/w20/es.png" class="inline mr-2" alt="Spanish">
+                  Español
+                </div>
+              </div>
+            </div>
+            <a href="contact.html"
+               class="mt-3 bg-accent text-white px-5 py-3 rounded-lg font-medium text-center transition-all hover:bg-accent/90" data-translate="nav_contact_mobile">
+              <i class="fas fa-calendar-check mr-2"></i>Contact US
+            </a>
+          </div>
+        </div>
+      </nav>
+  <!-- Hero Section -->
+  <section id="home" class="hero-section min-h-screen flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/50"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+        <span data-translate="hero_discover">Découvrez le</span> <span class="text-accent" data-translate="hero_morocco">Maroc Authentique</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto" data-translate="hero_subtitle">
+        Voyages sur mesure et circuits guidés pour une expérience inoubliable
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+        <a href="#tours" class="bg-primary text-white hover:bg-primary/90 font-medium px-8 py-4 rounded-xl shadow-lg transition-transform hover:scale-105" data-translate="btn_discover">
+          <i class="fas fa-compass mr-2"></i>Découvrir nos circuits
+        </a>
+        <a href="contact.html" class="bg-accent text-primary hover:bg-accent/90 font-medium px-8 py-4 rounded-xl shadow-lg transition-transform hover:scale-105" data-translate="btn_book_now">
+          <i class="fas fa-paper-plane mr-2"></i>Réserver maintenant
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-24 bg-gradient-to-br from-white via-gray-50/50 to-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full">
+      <div class="absolute top-20 left-10 w-32 h-32 bg-accent/5 rounded-full blur-2xl"></div>
+      <div class="absolute bottom-32 right-20 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-accent/3 to-primary/3 rounded-full blur-3xl"></div>
+    </div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-20">
+        <div class="inline-flex items-center bg-accent/10 text-accent px-6 py-3 rounded-full text-sm font-medium mb-6" data-translate="why_label">
+          <i class="fas fa-crown mr-2"></i>
+          Nos avantages exclusifs
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary leading-tight" data-translate="why_title">
+          Pourquoi choisir notre agence
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-6"></div>
+        <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed" data-translate="why_desc">
+          Découvrez ce qui rend nos circuits uniques et pourquoi nos clients reviennent année après année pour vivre de nouvelles aventures
+        </p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <!-- Feature 1 -->
+        <div class="group feature-card bg-white/90 backdrop-blur-sm rounded-3xl p-10 relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/5 rounded-full blur-xl opacity-60"></div>
+          <div class="relative z-10">
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mb-8 mx-auto group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+              <i class="fas fa-map-marked-alt text-3xl text-accent group-hover:scale-110 transition-transform duration-300"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-primary text-center group-hover:text-accent transition-colors duration-300" data-translate="feature1_title">
+              Circuits sur mesure
+            </h3>
+            <p class="text-gray-600 text-center leading-relaxed mb-6" data-translate="feature1_desc">
+              Des itinéraires conçus spécifiquement selon vos envies, votre budget et votre rythme de voyage
+            </p>
+            <div class="space-y-3 mb-8">
+              <div class="flex items-center text-sm text-gray-600">
+                <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                <span data-translate="feature1_detail1">Consultation personnalisée gratuite</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                <span data-translate="feature1_detail2">Adaptation selon vos contraintes</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                <span data-translate="feature1_detail3">Modifications possibles en cours de voyage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="group feature-card bg-white/90 backdrop-blur-sm rounded-3xl p-10 relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/5 rounded-full blur-xl opacity-60"></div>
+          <div class="relative z-10">
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mb-8 mx-auto group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+              <i class="fas fa-user-tie text-3xl text-accent group-hover:scale-110 transition-transform duration-300"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-primary text-center group-hover:text-accent transition-colors duration-300" data-translate="feature2_title">
+              Guides locaux experts
+            </h3>
+            <p class="text-gray-600 text-center leading-relaxed mb-6" data-translate="feature2_desc">
+              Des guides marocains passionnés et certifiés partageant leur culture et leur savoir-faire ancestral
+            </p>
+            <div class="space-y-3 mb-8">
+              <div class="flex items-center text-sm text-gray-600">
+                <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                <span data-translate="feature2_detail1">Guides certifiés par l'Office du Tourisme</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                <span data-translate="feature2_detail2">Multilingues (français, anglais, arabe)</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                <span data-translate="feature2_detail3">Spécialistes histoire et traditions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="group feature-card bg-white/90 backdrop-blur-sm rounded-3xl p-10 relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/5 rounded-full blur-xl opacity-60"></div>
+          <div class="relative z-10">
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mb-8 mx-auto group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+              <i class="fas fa-leaf text-3xl text-accent group-hover:scale-110 transition-transform duration-300"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-primary text-center group-hover:text-accent transition-colors duration-300" data-translate="feature3_title">
+              Expériences authentiques
+            </h3>
+            <p class="text-gray-600 text-center leading-relaxed mb-6" data-translate="feature3_desc">
+              Découvrez le vrai Maroc, loin des sentiers battus, avec des expériences immersives uniques
+            </p>
+            <div class="space-y-3 mb-8">
+              <div class="flex items-center text-sm text-gray-600">
+                <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                <span data-translate="feature3_detail1">Rencontres avec les communautés locales</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                <span data-translate="feature3_detail2">Ateliers artisanaux traditionnels</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                <span data-translate="feature3_detail3">Nuitées chez l'habitant possibles</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white/70 backdrop-blur-sm rounded-3xl p-10 shadow-xl border border-gray-200">
+        <h3 class="text-2xl font-bold text-center text-primary mb-8" data-translate="more_benefits">Plus d'avantages exclusifs</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center group">
+            <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+              <i class="fas fa-shield-alt text-2xl text-accent group-hover:text-white transition-colors duration-300"></i>
+            </div>
+            <h4 class="font-semibold text-primary mb-2" data-translate="benefit1_title">Assurance incluse</h4>
+            <p class="text-sm text-gray-600" data-translate="benefit1_desc">Protection complète pendant votre voyage</p>
+          </div>
+          <div class="text-center group">
+            <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+              <i class="fas fa-headset text-2xl text-accent group-hover:text-white transition-colors duration-300"></i>
+            </div>
+            <h4 class="font-semibold text-primary mb-2" data-translate="benefit2_title">Support 24/7</h4>
+            <p class="text-sm text-gray-600" data-translate="benefit2_desc">Assistance disponible à tout moment</p>
+          </div>
+          <div class="text-center group">
+            <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+              <i class="fas fa-medal text-2xl text-accent group-hover:text-white transition-colors duration-300"></i>
+            </div>
+            <h4 class="font-semibold text-primary mb-2" data-translate="benefit3_title">Qualité garantie</h4>
+            <p class="text-sm text-gray-600" data-translate="benefit3_desc">Satisfaction client à 98%</p>
+          </div>
+          <div class="text-center group">
+            <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+              <i class="fas fa-gift text-2xl text-accent group-hover:text-white transition-colors duration-300"></i>
+            </div>
+            <h4 class="font-semibold text-primary mb-2" data-translate="benefit4_title">Surprises incluses</h4>
+            <p class="text-sm text-gray-600" data-translate="benefit4_desc">Petites attentions durant le voyage</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Tours Section -->
+  <section id="tours" class="py-24 bg-gradient-to-br from-secondary/20 via-secondary/30 to-secondary/40 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(212,175,55,0.1)_0%,transparent_50%)] pointer-events-none"></div>
+    <div class="absolute top-32 right-20 w-48 h-48 bg-accent/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-16 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-20">
+        <div class="inline-flex items-center bg-white/90 backdrop-blur-sm text-accent px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg" data-translate="tours_label">
+          <i class="fas fa-compass mr-2"></i>
+          Découvrez nos destinations
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary leading-tight" data-translate="tours_title">
+          Nos circuits populaires
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-6"></div>
+        <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed" data-translate="tours_desc">
+          Explorez nos destinations les plus appréciées et laissez-vous tenter par l'aventure marocaine authentique
+        </p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <!-- Tour 1 -->
+        <div class="group tour-card bg-white/95 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 border border-white/50 relative">
+          <div class="relative overflow-hidden">
+            <img src="/images/Merzouga.jpg" alt="Marrakech - Merzouga" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute top-4 left-4 bg-accent/90 backdrop-blur-sm text-white text-sm font-medium px-3 py-2 rounded-full shadow-lg" data-translate="tour1_badge">
+              3 jours / 2 nuits
+            </div>
+            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-2 shadow-lg">
+              <div class="flex items-center">
+                <div class="text-amber-400 text-sm mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-gray-700 text-sm font-medium">5.0</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="mb-4">
+              <h3 class="text-2xl font-bold mb-3 text-primary group-hover:text-accent transition-colors duration-300" data-translate="tour1_title">
+                Marrakech - Merzouga
+              </h3>
+              <p class="text-gray-600 leading-relaxed" data-translate="tour1_desc">
+                Découvrez les magnifiques dunes de Merzouga et passez une nuit inoubliable sous les étoiles du Sahara.
+              </p>
+            </div>
+            <div class="space-y-2 mb-6">
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-sun text-accent mr-3"></i>
+                <span data-translate="tour1_feature1">Coucher de soleil magique sur les dunes de Merzouga</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-campground text-accent mr-3"></i>
+                <span data-translate="tour1_feature2">Nuit en bivouac traditionnel au cœur du Sahara</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-camel text-accent mr-3"></i>
+                <span data-translate="tour1_feature3">Excursion à dos de dromadaire dans les dunes dorées</span>
+              </div>
+            </div>
+            <div class="flex space-x-3">
+              <a href="/marrakech/3d-marrakech-merzouga.html" class="flex-1 bg-accent/10 hover:bg-accent text-accent hover:text-white py-3 px-4 rounded-xl font-semibold text-center transition-all duration-300 border border-accent/20" data-translate="btn_details">
+                Voir détails
+              </a>
+              <a href="/marrakech/3d-marrakech-merzouga.html#reservation" class="flex-1 bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-xl font-semibold text-center transition-all duration-300 shadow-lg" data-translate="btn_reserve">
+                Réserver
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Tour 2 -->
+        <div class="group tour-card bg-white/95 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 border border-white/50 relative">
+          <div class="relative overflow-hidden">
+            <img src="/images/ouzoud.webp" alt="Marrakech – Ouzoud" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute top-4 left-4 bg-primary/90 backdrop-blur-sm text-white text-sm font-medium px-3 py-2 rounded-full shadow-lg" data-translate="tour2_badge">
+              1 jour
+            </div>
+            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-2 shadow-lg">
+              <div class="flex items-center">
+                <div class="text-amber-400 text-sm mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-gray-700 text-sm font-medium">4.5</span>
+              </div>
+            </div>
+            <div class="absolute bottom-4 left-4 bg-accent text-primary text-xs font-bold px-3 py-1 rounded-full shadow-lg" data-translate="tour2_popular">
+              POPULAIRE
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="mb-4">
+              <h3 class="text-2xl font-bold mb-3 text-primary group-hover:text-accent transition-colors duration-300" data-translate="tour2_title">
+                Marrakech – Ouzoud waterfalls – Marrakech
+              </h3>
+              <p class="text-gray-600 leading-relaxed" data-translate="tour2_desc">
+                Départ de Marrakech vers les cascades d’Ouzoud, joyau naturel niché dans les montagnes du Moyen Atlas.
+              </p>
+            </div>
+            <div class="space-y-2 mb-6">
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-water text-accent mr-3"></i>
+                <span data-translate="tour2_feature1">Découverte des majestueuses cascades d’Ouzoud</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-hiking text-accent mr-3"></i>
+                <span data-translate="tour2_feature2">Randonnée panoramique autour des chutes</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-leaf text-accent mr-3"></i>
+                <span data-translate="tour2_feature3">Rencontre avec la nature et les singes berbères</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-accent/10 text-accent text-xs px-3 py-1 rounded-full font-medium" data-translate="tag_unesco">Patrimoine UNESCO</span>
+              <span class="bg-accent/10 text-accent text-xs px-3 py-1 rounded-full font-medium" data-translate="tag_culture">Culture</span>
+              <span class="bg-accent/10 text-accent text-xs px-3 py-1 rounded-full font-medium" data-translate="tag_history">Histoire</span>
+            </div>
+            <div class="flex space-x-3">
+              <a href="/marrakech/day1-Marrakech – Ouzoud -waterfalls – Marrakech.html" class="flex-1 bg-accent/10 hover:bg-accent text-accent hover:text-white py-3 px-4 rounded-xl font-semibold text-center transition-all duration-300 border border-accent/20" data-translate="btn_details">
+                Voir détails
+              </a>
+              <a href="/marrakech/day1-Marrakech – Ouzoud -waterfalls – Marrakech.html#reservation" class="flex-1 bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-xl font-semibold text-center transition-all duration-300 shadow-lg" data-translate="btn_reserve">
+                Réserver
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Tour 3 -->
+        <div class="group tour-card bg-white/95 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 border border-white/50 relative">
+          <div class="relative overflow-hidden">
+            <img src="/images/Essaouira.webp" alt="Marrakech – Essaouira" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute top-4 left-4 bg-orange-500/90 backdrop-blur-sm text-white text-sm font-medium px-3 py-2 rounded-full shadow-lg" data-translate="tour3_badge">
+              1 jour
+            </div>
+            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-2 shadow-lg">
+              <div class="flex items-center">
+                <div class="text-amber-400 text-sm mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-gray-700 text-sm font-medium">5.0</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="mb-4">
+              <h3 class="text-2xl font-bold mb-3 text-primary group-hover:text-accent transition-colors duration-300" data-translate="tour3_title">
+                Marrakech – Essaouira – Marrakech
+              </h3>
+              <p class="text-gray-600 leading-relaxed" data-translate="tour3_desc">
+                Explorez Essaouira le temps d’une journée depuis Marrakech, entre médina historique, brise marine et charme authentique.
+              </p>
+            </div>
+            <div class="space-y-2 mb-6">
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-water text-accent mr-3"></i>
+                <span data-translate="tour3_feature1">Promenade sur la plage d’Essaouira</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-fish text-accent mr-3"></i>
+                <span data-translate="tour3_feature2">Dégustation de poissons frais au port</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-landmark text-accent mr-3"></i>
+                <span data-translate="tour3_feature3">Découverte de la médina classée UNESCO</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-orange-100 text-orange-600 text-xs px-3 py-1 rounded-full font-medium" data-translate="tag_adventure">Aventure</span>
+              <span class="bg-orange-100 text-orange-600 text-xs px-3 py-1 rounded-full font-medium" data-translate="tag_nature">Nature</span>
+              <span class="bg-orange-100 text-orange-600 text-xs px-3 py-1 rounded-full font-medium" data-translate="tag_camping">Camping</span>
+            </div>
+            <div class="flex space-x-3">
+              <a href="#" class="flex-1 bg-accent/10 hover:bg-accent text-accent hover:text-white py-3 px-4 rounded-xl font-semibold text-center transition-all duration-300 border border-accent/20" data-translate="btn_details">
+                Voir détails
+              </a>
+              <a href="#" class="flex-1 bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-xl font-semibold text-center transition-all duration-300 shadow-lg" data-translate="btn_reserve">
+                Réserver
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/30 max-w-2xl mx-auto">
+          <h3 class="text-2xl font-bold text-primary mb-4" data-translate="more_tours_title">Plus de 15 circuits disponibles</h3>
+          <p class="text-gray-600 mb-6" data-translate="more_tours_desc">Découvrez tous nos itinéraires personnalisés pour explorer le Maroc selon vos envies</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="marrakech.html" class="inline-flex items-center bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition-all duration-300 hover:scale-105" data-translate="btn_see_all">
+              <i class="fas fa-route mr-2"></i>
+              Voir tous nos circuits
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(212,175,55,0.03)_0%,transparent_50%)] pointer-events-none"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-20">
+        <div class="inline-flex items-center bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6" data-translate="stats_label">
+          <i class="fas fa-award mr-2"></i>
+          Excellence certifiée
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary" data-translate="stats_title">Notre expertise en chiffres</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-6"></div>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="stats_desc">Des années d'expérience au service des voyageurs du monde entier</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent/50 via-accent to-accent/50 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+          <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-calendar-alt text-2xl text-accent"></i>
+          </div>
+          <span class="block text-5xl font-bold text-accent mb-4 group-hover:scale-105 transition-transform duration-300" data-translate="stat1_value">12+</span>
+          <h3 class="text-xl font-semibold text-primary mb-2" data-translate="stat1_label">Années d'expérience</h3>
+          <p class="text-gray-600" data-translate="stat1_desc">Au service des voyageurs depuis 2013</p>
+        </div>
+        <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent/50 via-accent to-accent/50 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 delay-100"></div>
+          <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-users text-2xl text-accent"></i>
+          </div>
+          <span class="block text-5xl font-bold text-accent mb-4 group-hover:scale-105 transition-transform duration-300" data-translate="stat2_value">2500+</span>
+          <h3 class="text-xl font-semibold text-primary mb-2" data-translate="stat2_label">Clients satisfaits</h3>
+          <p class="text-gray-600" data-translate="stat2_desc">Des voyageurs comblés dans le monde entier</p>
+        </div>
+        <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent/50 via-accent to-accent/50 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 delay-200"></div>
+          <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-route text-2xl text-accent"></i>
+          </div>
+          <span class="block text-5xl font-bold text-accent mb-4 group-hover:scale-105 transition-transform duration-300" data-translate="stat3_value">150+</span>
+          <h3 class="text-xl font-semibold text-primary mb-2" data-translate="stat3_label">Circuits organisés</h3>
+          <p class="text-gray-600" data-translate="stat3_desc">Des itinéraires variés et authentiques</p>
+        </div>
+        <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent/50 via-accent to-accent/50 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 delay-300"></div>
+          <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-star text-2xl text-accent"></i>
+          </div>
+          <span class="block text-5xl font-bold text-accent mb-4 group-hover:scale-105 transition-transform duration-300" data-translate="stat4_value">98%</span>
+          <h3 class="text-xl font-semibold text-primary mb-2" data-translate="stat4_label">Taux de satisfaction</h3>
+          <p class="text-gray-600" data-translate="stat4_desc">La qualité reconnue par nos clients</p>
+        </div>
+      </div>
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-12 shadow-2xl border border-gray-200 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 pointer-events-none"></div>
+        <div class="relative z-10">
+          <div class="text-center mb-12">
+            <h3 class="text-4xl font-bold text-primary mb-4" data-translate="why_morocco_title">Pourquoi choisir le Maroc ?</h3>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-translate="why_morocco_desc">Une destination d'exception qui offre une expérience de voyage unique et authentique</p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <div class="group bg-white/80 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100">
+              <div class="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl mb-6 group-hover:from-accent group-hover:to-accent/80 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 mx-auto">
+                <i class="fas fa-mountain text-accent text-3xl group-hover:text-white transition-colors duration-300"></i>
+              </div>
+              <h4 class="text-2xl font-semibold text-primary mb-4 text-center" data-translate="morocco_landscape">Paysages diversifiés</h4>
+              <p class="text-gray-600 text-center mb-6" data-translate="morocco_landscape_desc">Une géographie exceptionnelle qui offre une variété de paysages à couper le souffle</p>
+              <div class="space-y-3">
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <span data-translate="m_land1">Chaînes de l'Atlas avec sommets enneigés</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <span data-translate="m_land2">Désert du Sahara et dunes de Merzouga</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <span data-translate="m_land3">Côtes atlantique et méditerranéenne</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <span data-translate="m_land4">Oasis verdoyantes et vallées fleuries</span>
+                </div>
+              </div>
+            </div>
+            <div class="group bg-white/80 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100">
+              <div class="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl mb-6 group-hover:from-accent group-hover:to-accent/80 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 mx-auto">
+                <i class="fas fa-mosque text-accent text-3xl group-hover:text-white transition-colors duration-300"></i>
+              </div>
+              <h4 class="text-2xl font-semibold text-primary mb-4 text-center" data-translate="morocco_culture">Richesse culturelle</h4>
+              <p class="text-gray-600 text-center mb-6" data-translate="morocco_culture_desc">Un héritage millénaire préservé et vivant qui fascine les voyageurs du monde entier</p>
+              <div class="space-y-3">
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <span data-translate="m_cult1">Médinas impériales classées UNESCO</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <span data-translate="m_cult2">Architecture islamique authentique</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <span data-translate="m_cult3">Traditions artisanales ancestrales</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <span data-translate="m_cult4">Gastronomie raffinée et épices</span>
+                </div>
+              </div>
+            </div>
+            <div class="group bg-white/80 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100">
+              <div class="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl mb-6 group-hover:from-accent group-hover:to-accent/80 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 mx-auto">
+                <i class="fas fa-hands-helping text-accent text-3xl group-hover:text-white transition-colors duration-300"></i>
+              </div>
+              <h4 class="text-2xl font-semibold text-primary mb-4 text-center" data-translate="morocco_hospitality">Hospitalité légendaire</h4>
+              <p class="text-gray-600 text-center mb-6" data-translate="morocco_hospitality_desc">L'accueil chaleureux et généreux des Marocains rend chaque voyage inoubliable</p>
+              <div class="space-y-3">
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <span data-translate="m_hosp1">Accueil familial dans les riads</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <span data-translate="m_hosp2">Partage du thé à la menthe</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <span data-translate="m_hosp3">Guides locaux passionnés</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <span data-translate="m_hosp4">Expériences authentiques partagées</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 text-center">
+            <div class="inline-flex items-center bg-accent/10 rounded-full px-6 py-3">
+              <div class="flex -space-x-2 mr-4">
+                <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white text-xs font-bold">A</div>
+                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-xs font-bold">M</div>
+                <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white text-xs font-bold">S</div>
+              </div>
+              <span class="text-sm font-medium text-primary" data-translate="trust_count">Plus de 2500 voyageurs nous font déjà confiance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-24 bg-gradient-to-br from-secondary/20 via-secondary/30 to-secondary/40 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(212,175,55,0.1)_0%,transparent_50%)] pointer-events-none"></div>
+    <div class="absolute top-20 right-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-20 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-20">
+        <div class="inline-flex items-center bg-white/90 backdrop-blur-sm text-accent px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg" data-translate="testimonials_label">
+          <i class="fas fa-quote-left mr-2"></i>
+          Témoignages authentiques
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary" data-translate="testimonials_title">Ce que disent nos clients</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-6"></div>
+        <p class="text-xl text-gray-700 max-w-3xl mx-auto" data-translate="testimonials_desc">Découvrez les témoignages de voyageurs qui ont vécu l'expérience avec notre agence</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div class="lg:col-span-2">
+          <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-white/50 relative overflow-hidden group hover:shadow-3xl transition-all duration-500">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/10 to-transparent rounded-bl-3xl"></div>
+            <div class="absolute top-6 right-6 text-accent/20 text-6xl">
+              <i class="fas fa-quote-right"></i>
+            </div>
+            <div class="relative z-10">
+              <div class="flex items-start mb-6">
+                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah L." class="w-20 h-20 rounded-2xl object-cover shadow-lg ring-4 ring-white">
+                <div class="ml-6">
+                  <h4 class="text-2xl font-bold text-primary mb-2" data-translate="testimonial1_name">Sarah L.</h4>
+                  <p class="text-gray-500 mb-3" data-translate="testimonial1_trip">Voyage famille • Marrakech & Sahara</p>
+                  <div class="flex items-center mb-2">
+                    <div class="text-accent text-lg mr-2">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-sm text-gray-500" data-translate="testimonial1_rating">5/5 • Il y a 2 semaines</span>
+                  </div>
+                </div>
+              </div>
+              <blockquote class="text-lg text-gray-700 leading-relaxed mb-6" data-translate="testimonial1_quote">
+                "Notre voyage au Maroc a dépassé toutes nos attentes. Le guide était passionné et connaissait parfaitement l'histoire de chaque lieu. Les paysages étaient époustouflants et l'organisation impeccable. Nos enfants parlent encore de la nuit dans le désert !"
+              </blockquote>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium" data-translate="tag_guide">Guide expert</span>
+                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium" data-translate="tag_family">Famille</span>
+                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium" data-translate="tag_sahara">Sahara</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group">
+            <div class="flex items-center mb-4">
+              <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Marc D." class="w-16 h-16 rounded-xl object-cover shadow-md ring-2 ring-white">
+              <div class="ml-4">
+                <h4 class="text-lg font-bold text-primary" data-translate="testimonial2_name">Marc D.</h4>
+                <div class="text-accent text-sm mb-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="text-xs text-gray-500" data-translate="testimonial2_trip">Aventure solo • Fès & Atlas</p>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed" data-translate="testimonial2_quote">
+              "L'excursion dans le désert fut magique. Dormir sous un ciel étoilé était inoubliable. L'équipe locale était exceptionnelle."
+            </p>
+          </div>
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group">
+            <div class="flex items-center mb-4">
+              <img src="https://randomuser.me/api/portraits/women/64.jpg" alt="Julie M." class="w-16 h-16 rounded-xl object-cover shadow-md ring-2 ring-white">
+              <div class="ml-4">
+                <h4 class="text-lg font-bold text-primary" data-translate="testimonial3_name">Julie M.</h4>
+                <div class="text-accent text-sm mb-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text-xs text-gray-500" data-translate="testimonial3_trip">Couple • Casablanca & Côte</p>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed" data-translate="testimonial3_quote">
+              "Organisation parfaite ! Chaque détail du circuit était pensé pour nous offrir une expérience authentique et mémorable."
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/30">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="text-center group">
+            <img src="https://randomuser.me/api/portraits/men/25.jpg" alt="Client" class="w-16 h-16 rounded-full mx-auto mb-4 shadow-lg ring-2 ring-accent/20 group-hover:ring-accent/50 transition-all duration-300">
+            <div class="text-accent mb-2">
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+            </div>
+            <p class="text-sm text-gray-600 italic" data-translate="quote4">"Circuit parfaitement organisé, guide très professionnel."</p>
+            <p class="text-xs text-gray-500 mt-2 font-medium" data-translate="name4">Antoine B.</p>
+          </div>
+          <div class="text-center group">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Client" class="w-16 h-16 rounded-full mx-auto mb-4 shadow-lg ring-2 ring-accent/20 group-hover:ring-accent/50 transition-all duration-300">
+            <div class="text-accent mb-2">
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+            </div>
+            <p class="text-sm text-gray-600 italic" data-translate="quote5">"Expérience inoubliable dans les kasbahs de l'Atlas."</p>
+            <p class="text-xs text-gray-500 mt-2 font-medium" data-translate="name5">Marie C.</p>
+          </div>
+          <div class="text-center group">
+            <img src="https://randomuser.me/api/portraits/men/38.jpg" alt="Client" class="w-16 h-16 rounded-full mx-auto mb-4 shadow-lg ring-2 ring-accent/20 group-hover:ring-accent/50 transition-all duration-300">
+            <div class="text-accent mb-2">
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+            </div>
+            <p class="text-sm text-gray-600 italic" data-translate="quote6">"Accueil chaleureux et découvertes authentiques."</p>
+            <p class="text-xs text-gray-500 mt-2 font-medium" data-translate="name6">David R.</p>
+          </div>
+          <div class="text-center group">
+            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Client" class="w-16 h-16 rounded-full mx-auto mb-4 shadow-lg ring-2 ring-accent/20 group-hover:ring-accent/50 transition-all duration-300">
+            <div class="text-accent mb-2">
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+              <i class="fas fa-star text-sm"></i>
+            </div>
+            <p class="text-sm text-gray-600 italic" data-translate="quote7">"Service client exceptionnel, je recommande vivement."</p>
+            <p class="text-xs text-gray-500 mt-2 font-medium" data-translate="name7">Emma T.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section py-24" style="background: linear-gradient(135deg, #24441B 0%, #1A3312 100%);">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 md:p-12">
+          <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-white leading-tight" data-translate="cta_title">
+              Prêt à vivre votre aventure marocaine ?
+            </h2>
+            <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed" data-translate="cta_desc">
+              Contactez-nous dès aujourd'hui pour créer votre circuit personnalisé et partir à la découverte des trésors du Maroc.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-8">
+            <a href="contact.html" class="group bg-accent text-primary font-semibold px-10 py-4 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex items-center justify-center" data-translate="cta_btn1">
+              <i class="fas fa-paper-plane mr-3 transition-transform group-hover:translate-x-1"></i>
+              Nous contacter
+            </a>
+            <a href="#tours" class="group bg-white text-primary font-semibold px-10 py-4 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex items-center justify-center" data-translate="cta_btn2">
+              <i class="fas fa-compass mr-3 transition-transform group-hover:rotate-12"></i>
+              Explorer nos circuits
+            </a>
+          </div>
+          <div class="border-t border-white/20 pt-8">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/80">
+              <div class="flex items-center">
+                <i class="fas fa-phone mr-2 text-accent"></i>
+                <span class="text-sm" data-translate="support_time">Réponse sous 24h</span>
+              </div>
+              <div class="hidden sm:block w-px h-4 bg-white/30"></div>
+              <div class="flex items-center">
+                <i class="fas fa-shield-alt mr-2 text-accent"></i>
+                <span class="text-sm" data-translate="custom_tours">Circuits personnalisés</span>
+              </div>
+              <div class="hidden sm:block w-px h-4 bg-white/30"></div>
+              <div class="flex items-center">
+                <i class="fas fa-star mr-2 text-accent"></i>
+                <span class="text-sm" data-translate="local_guides">Guides experts locaux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div class="text-primary px-4 py-2 rounded-lg font-bold text-xl mb-6 inline-block">
+             <a href="index.html" class="flex items-center">
+              <img src="images/logo.png" class="h-16 w-auto" alt="Enjoy Marrakech Tours">
+            </a>
+          </div>
+          <p class="text-gray-400 mb-6" data-translate="footer_about">
+            Votre agence de voyage spécialiste des circuits sur mesure au Maroc depuis plus de 12 ans.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-white" data-translate="footer_quick_links">Liens Rapides</h3>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-gray-400 hover:text-accent transition-colors" data-translate="nav_home">Accueil</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-accent transition-colors" data-translate="nav_about">À propos</a></li>
+            <li><a href="#tours" class="text-gray-400 hover:text-accent transition-colors" data-translate="nav_tours">Circuits</a></li>
+            <li><a href="galery.html" class="text-gray-400 hover:text-accent transition-colors" data-translate="nav_gallery">Galerie</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-accent transition-colors" data-translate="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-white" data-translate="footer_contact">Contact</h3>
+          <ul class="space-y-3 text-gray-400">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>
+              <span data-translate="footer_address">123 Rue de la Médina, Marrakech, Maroc</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone mt-1 mr-3 text-accent"></i>
+              <span data-translate="footer_phone">+212 5 22 12 34 56</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3 text-accent"></i>
+              <span data-translate="footer_email">info@enjoymarrakechtours.com</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-white" data-translate="footer_newsletter">Abonnez-vous</h3>
+          <p class="text-gray-400 mb-4" data-translate="footer_newsletter_desc">Recevez nos dernières offres et conseils de voyage par email.</p>
+          <form class="flex flex-col">
+            <input type="email" placeholder="Votre adresse email" data-translate="footer_email_placeholder" class="bg-gray-800 text-white p-3 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-accent">
+            <button type="submit" class="bg-accent text-primary font-medium py-3 rounded hover:bg-accent/90 transition-colors" data-translate="footer_subscribe">S'abonner</button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+        <p>&copy; 2025 Enjoy Marrakech Tours. <span data-translate="footer_rights">Tous droits réservés.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // === TRANSLATION SYSTEM ===
+    const translations = {
+      fr: {
+        page_title: "Enjoy Marrakech Tours - Découvrez le Maroc authentique",
+        nav_home: "Accueil",
+        nav_about: "À propos",
+        nav_packages: "Packages",
+        nav_gallery: "Galerie",
+        nav_contact: "Contact US",
+        nav_home_mobile: "Accueil",
+        nav_about_mobile: "À propos",
+        nav_tours: "Tours",
+        nav_gallery_mobile: "Galerie",
+        nav_contact_mobile: "Contact US",
+        from_marrakech: "From Marrakech",
+        from_fes: "From Fes",
+        from_casablanca: "From Casablanca",
+        hero_discover: "Découvrez le",
+        hero_morocco: "Maroc Authentique",
+        hero_subtitle: "Voyages sur mesure et circuits guidés pour une expérience inoubliable",
+        btn_discover: "Découvrir nos circuits",
+        btn_book_now: "Réserver maintenant",
+        why_label: "Nos avantages exclusifs",
+        why_title: "Pourquoi choisir notre agence",
+        why_desc: "Découvrez ce qui rend nos circuits uniques et pourquoi nos clients reviennent année après année pour vivre de nouvelles aventures",
+        feature1_title: "Circuits sur mesure",
+        feature1_desc: "Des itinéraires conçus spécifiquement selon vos envies, votre budget et votre rythme de voyage",
+        feature1_detail1: "Consultation personnalisée gratuite",
+        feature1_detail2: "Adaptation selon vos contraintes",
+        feature1_detail3: "Modifications possibles en cours de voyage",
+        feature2_title: "Guides locaux experts",
+        feature2_desc: "Des guides marocains passionnés et certifiés partageant leur culture et leur savoir-faire ancestral",
+        feature2_detail1: "Guides certifiés par l'Office du Tourisme",
+        feature2_detail2: "Multilingues (français, anglais, arabe)",
+        feature2_detail3: "Spécialistes histoire et traditions",
+        feature3_title: "Expériences authentiques",
+        feature3_desc: "Découvrez le vrai Maroc, loin des sentiers battus, avec des expériences immersives uniques",
+        feature3_detail1: "Rencontres avec les communautés locales",
+        feature3_detail2: "Ateliers artisanaux traditionnels",
+        feature3_detail3: "Nuitées chez l'habitant possibles",
+        more_benefits: "Plus d'avantages exclusifs",
+        benefit1_title: "Assurance incluse",
+        benefit1_desc: "Protection complète pendant votre voyage",
+        benefit2_title: "Support 24/7",
+        benefit2_desc: "Assistance disponible à tout moment",
+        benefit3_title: "Qualité garantie",
+        benefit3_desc: "Satisfaction client à 98%",
+        benefit4_title: "Surprises incluses",
+        benefit4_desc: "Petites attentions durant le voyage",
+        tours_label: "Découvrez nos destinations",
+        tours_title: "Nos circuits populaires",
+        tours_desc: "Explorez nos destinations les plus appréciées et laissez-vous tenter par l'aventure marocaine authentique",
+        tour1_title: "Marrakech - Merzouga",
+        tour1_desc: "Découvrez les magnifiques dunes de Merzouga et passez une nuit inoubliable sous les étoiles du Sahara.",
+        tour1_badge: "3 jours / 2 nuits",
+        tour1_feature1: "Coucher de soleil magique sur les dunes de Merzouga",
+        tour1_feature2: "Nuit en bivouac traditionnel au cœur du Sahara",
+        tour1_feature3: "Excursion à dos de dromadaire dans les dunes dorées",
+        tour2_title: "Marrakech – Ouzoud waterfalls – Marrakech",
+        tour2_desc: "Départ de Marrakech vers les cascades d’Ouzoud, joyau naturel niché dans les montagnes du Moyen Atlas.",
+        tour2_badge: "1 jour",
+        tour2_popular: "POPULAIRE",
+        tour2_feature1: "Découverte des majestueuses cascades d’Ouzoud",
+        tour2_feature2: "Randonnée panoramique autour des chutes",
+        tour2_feature3: "Rencontre avec la nature et les singes berbères",
+        tag_unesco: "Patrimoine UNESCO",
+        tag_culture: "Culture",
+        tag_history: "Histoire",
+        tour3_title: "Marrakech – Essaouira – Marrakech",
+        tour3_desc: "Explorez Essaouira le temps d’une journée depuis Marrakech, entre médina historique, brise marine et charme authentique.",
+        tour3_badge: "1 jour",
+        tour3_feature1: "Promenade sur la plage d’Essaouira",
+        tour3_feature2: "Dégustation de poissons frais au port",
+        tour3_feature3: "Découverte de la médina classée UNESCO",
+        tag_adventure: "Aventure",
+        tag_nature: "Nature",
+        tag_camping: "Camping",
+        btn_details: "Voir détails",
+        btn_reserve: "Réserver",
+        more_tours_title: "Plus de 15 circuits disponibles",
+        more_tours_desc: "Découvrez tous nos itinéraires personnalisés pour explorer le Maroc selon vos envies",
+        btn_see_all: "Voir tous nos circuits",
+        stats_label: "Excellence certifiée",
+        stats_title: "Notre expertise en chiffres",
+        stats_desc: "Des années d'expérience au service des voyageurs du monde entier",
+        stat1_value: "12+",
+        stat1_label: "Années d'expérience",
+        stat1_desc: "Au service des voyageurs depuis 2013",
+        stat2_value: "2500+",
+        stat2_label: "Clients satisfaits",
+        stat2_desc: "Des voyageurs comblés dans le monde entier",
+        stat3_value: "150+",
+        stat3_label: "Circuits organisés",
+        stat3_desc: "Des itinéraires variés et authentiques",
+        stat4_value: "98%",
+        stat4_label: "Taux de satisfaction",
+        stat4_desc: "La qualité reconnue par nos clients",
+        why_morocco_title: "Pourquoi choisir le Maroc ?",
+        why_morocco_desc: "Une destination d'exception qui offre une expérience de voyage unique et authentique",
+        morocco_landscape: "Paysages diversifiés",
+        morocco_landscape_desc: "Une géographie exceptionnelle qui offre une variété de paysages à couper le souffle",
+        m_land1: "Chaînes de l'Atlas avec sommets enneigés",
+        m_land2: "Désert du Sahara et dunes de Merzouga",
+        m_land3: "Côtes atlantique et méditerranéenne",
+        m_land4: "Oasis verdoyantes et vallées fleuries",
+        morocco_culture: "Richesse culturelle",
+        morocco_culture_desc: "Un héritage millénaire préservé et vivant qui fascine les voyageurs du monde entier",
+        m_cult1: "Médinas impériales classées UNESCO",
+        m_cult2: "Architecture islamique authentique",
+        m_cult3: "Traditions artisanales ancestrales",
+        m_cult4: "Gastronomie raffinée et épices",
+        morocco_hospitality: "Hospitalité légendaire",
+        morocco_hospitality_desc: "L'accueil chaleureux et généreux des Marocains rend chaque voyage inoubliable",
+        m_hosp1: "Accueil familial dans les riads",
+        m_hosp2: "Partage du thé à la menthe",
+        m_hosp3: "Guides locaux passionnés",
+        m_hosp4: "Expériences authentiques partagées",
+        trust_count: "Plus de 2500 voyageurs nous font déjà confiance",
+        testimonials_label: "Témoignages authentiques",
+        testimonials_title: "Ce que disent nos clients",
+        testimonials_desc: "Découvrez les témoignages de voyageurs qui ont vécu l'expérience avec notre agence",
+        testimonial1_name: "Sarah L.",
+        testimonial1_trip: "Voyage famille • Marrakech & Sahara",
+        testimonial1_rating: "5/5 • Il y a 2 semaines",
+        testimonial1_quote: "\"Notre voyage au Maroc a dépassé toutes nos attentes. Le guide était passionné et connaissait parfaitement l'histoire de chaque lieu. Les paysages étaient époustouflants et l'organisation impeccable. Nos enfants parlent encore de la nuit dans le désert !\"",
+        tag_guide: "Guide expert",
+        tag_family: "Famille",
+        tag_sahara: "Sahara",
+        testimonial2_name: "Marc D.",
+        testimonial2_trip: "Aventure solo • Fès & Atlas",
+        testimonial2_quote: "\"L'excursion dans le désert fut magique. Dormir sous un ciel étoilé était inoubliable. L'équipe locale était exceptionnelle.\"",
+        testimonial3_name: "Julie M.",
+        testimonial3_trip: "Couple • Casablanca & Côte",
+        testimonial3_quote: "\"Organisation parfaite ! Chaque détail du circuit était pensé pour nous offrir une expérience authentique et mémorable.\"",
+        quote4: "\"Circuit parfaitement organisé, guide très professionnel.\"",
+        name4: "Antoine B.",
+        quote5: "\"Expérience inoubliable dans les kasbahs de l'Atlas.\"",
+        name5: "Marie C.",
+        quote6: "\"Accueil chaleureux et découvertes authentiques.\"",
+        name6: "David R.",
+        quote7: "\"Service client exceptionnel, je recommande vivement.\"",
+        name7: "Emma T.",
+        cta_title: "Prêt à vivre votre aventure marocaine ?",
+        cta_desc: "Contactez-nous dès aujourd'hui pour créer votre circuit personnalisé et partir à la découverte des trésors du Maroc.",
+        cta_btn1: "Nous contacter",
+        cta_btn2: "Explorer nos circuits",
+        support_time: "Réponse sous 24h",
+        custom_tours: "Circuits personnalisés",
+        local_guides: "Guides experts locaux",
+        footer_about: "Votre agence de voyage spécialiste des circuits sur mesure au Maroc depuis plus de 12 ans.",
+        footer_quick_links: "Liens Rapides",
+        footer_contact: "Contact",
+        footer_address: "123 Rue de la Médina, Marrakech, Maroc",
+        footer_phone: "+212 5 22 12 34 56",
+        footer_email: "info@enjoymarrakechtours.com",
+        footer_newsletter: "Abonnez-vous",
+        footer_newsletter_desc: "Recevez nos dernières offres et conseils de voyage par email.",
+        footer_email_placeholder: "Votre adresse email",
+        footer_subscribe: "S'abonner",
+        footer_rights: "Tous droits réservés."
+      },
+      en: {
+        page_title: "Enjoy Marrakech Tours - Discover Authentic Morocco",
+        nav_home: "Home",
+        nav_about: "About",
+        nav_packages: "Packages",
+        nav_gallery: "Gallery",
+        nav_contact: "Contact US",
+        nav_home_mobile: "Home",
+        nav_about_mobile: "About",
+        nav_tours: "Tours",
+        nav_gallery_mobile: "Gallery",
+        nav_contact_mobile: "Contact US",
+        from_marrakech: "From Marrakech",
+        from_fes: "From Fes",
+        from_casablanca: "From Casablanca",
+        hero_discover: "Discover",
+        hero_morocco: "Authentic Morocco",
+        hero_subtitle: "Customized trips and guided tours for an unforgettable experience",
+        btn_discover: "Discover Our Tours",
+        btn_book_now: "Book Now",
+        why_label: "Our Exclusive Advantages",
+        why_title: "Why Choose Our Agency",
+        why_desc: "Discover what makes our tours unique and why our clients return year after year for new adventures",
+        feature1_title: "Custom Itineraries",
+        feature1_desc: "Routes designed specifically to match your wishes, budget, and travel pace",
+        feature1_detail1: "Free personalized consultation",
+        feature1_detail2: "Adapted to your constraints",
+        feature1_detail3: "Changes possible during your trip",
+        feature2_title: "Expert Local Guides",
+        feature2_desc: "Passionate, certified Moroccan guides sharing their culture and ancestral knowledge",
+        feature2_detail1: "Certified by the Tourism Office",
+        feature2_detail2: "Multilingual (French, English, Arabic)",
+        feature2_detail3: "Specialists in history and traditions",
+        feature3_title: "Authentic Experiences",
+        feature3_desc: "Discover the real Morocco, off the beaten path, with immersive unique experiences",
+        feature3_detail1: "Meet local communities",
+        feature3_detail2: "Traditional craft workshops",
+        feature3_detail3: "Homestays possible",
+        more_benefits: "More Exclusive Benefits",
+        benefit1_title: "Included Insurance",
+        benefit1_desc: "Full protection during your trip",
+        benefit2_title: "24/7 Support",
+        benefit2_desc: "Assistance available anytime",
+        benefit3_title: "Quality Guaranteed",
+        benefit3_desc: "98% client satisfaction rate",
+        benefit4_title: "Included Surprises",
+        benefit4_desc: "Small thoughtful gifts during your journey",
+        tours_label: "Discover Our Destinations",
+        tours_title: "Our Popular Tours",
+        tours_desc: "Explore our most-loved destinations and let Moroccan adventure inspire you",
+        tour1_title: "Marrakech - Merzouga",
+        tour1_desc: "Discover the stunning dunes of Merzouga and spend an unforgettable night under the Sahara stars.",
+        tour1_badge: "3 Days / 2 Nights",
+        tour1_feature1: "Magical sunset over the Merzouga dunes",
+        tour1_feature2: "Traditional desert camp under the stars",
+        tour1_feature3: "Camel trek through golden dunes",
+        tour2_title: "Marrakech – Ouzoud Waterfalls – Marrakech",
+        tour2_desc: "Depart from Marrakech to the Ouzoud waterfalls, a natural gem nestled in the Middle Atlas mountains.",
+        tour2_badge: "1 Day",
+        tour2_popular: "POPULAR",
+        tour2_feature1: "Discover majestic Ouzoud waterfalls",
+        tour2_feature2: "Panoramic hike around the falls",
+        tour2_feature3: "Nature encounters with Berber monkeys",
+        tag_unesco: "UNESCO Heritage",
+        tag_culture: "Culture",
+        tag_history: "History",
+        tour3_title: "Marrakech – Essaouira – Marrakech",
+        tour3_desc: "Explore Essaouira for a day from Marrakech—historic medina, ocean breeze, and authentic charm.",
+        tour3_badge: "1 Day",
+        tour3_feature1: "Stroll along Essaouira beach",
+        tour3_feature2: "Fresh seafood tasting at the port",
+        tour3_feature3: "UNESCO-listed medina discovery",
+        tag_adventure: "Adventure",
+        tag_nature: "Nature",
+        tag_camping: "Camping",
+        btn_details: "View Details",
+        btn_reserve: "Book",
+        more_tours_title: "Over 15 Tours Available",
+        more_tours_desc: "Discover all our custom itineraries to explore Morocco your way",
+        btn_see_all: "See All Tours",
+        stats_label: "Certified Excellence",
+        stats_title: "Our Expertise in Numbers",
+        stats_desc: "Years of experience serving travelers worldwide",
+        stat1_value: "12+",
+        stat1_label: "Years of Experience",
+        stat1_desc: "Serving travelers since 2013",
+        stat2_value: "2500+",
+        stat2_label: "Satisfied Clients",
+        stat2_desc: "Delighted travelers around the world",
+        stat3_value: "150+",
+        stat3_label: "Organized Tours",
+        stat3_desc: "Diverse and authentic itineraries",
+        stat4_value: "98%",
+        stat4_label: "Satisfaction Rate",
+        stat4_desc: "Quality recognized by our clients",
+        why_morocco_title: "Why Choose Morocco?",
+        why_morocco_desc: "A unique destination offering one-of-a-kind travel experiences",
+        morocco_landscape: "Diverse Landscapes",
+        morocco_landscape_desc: "Breathtaking variety of dramatic natural scenery",
+        m_land1: "Snow-capped Atlas Mountains",
+        m_land2: "Sahara Desert and Merzouga dunes",
+        m_land3: "Atlantic & Mediterranean coasts",
+        m_land4: "Lush oases and blooming valleys",
+        morocco_culture: "Cultural Richness",
+        morocco_culture_desc: "A living millennial heritage that fascinates global travelers",
+        m_cult1: "UNESCO imperial medinas",
+        m_cult2: "Authentic Islamic architecture",
+        m_cult3: "Ancient artisan traditions",
+        m_cult4: "Refined cuisine and spices",
+        morocco_hospitality: "Legendary Hospitality",
+        morocco_hospitality_desc: "The warm and generous welcome of Moroccans makes every trip unforgettable",
+        m_hosp1: "Family welcome in riads",
+        m_hosp2: "Shared mint tea ritual",
+        m_hosp3: "Passionate local guides",
+        m_hosp4: "Shared authentic experiences",
+        trust_count: "Over 2500 travelers already trust us",
+        testimonials_label: "Authentic Testimonials",
+        testimonials_title: "What Our Clients Say",
+        testimonials_desc: "Read feedback from travelers who experienced our tours",
+        testimonial1_name: "Sarah L.",
+        testimonial1_trip: "Family Trip • Marrakech & Sahara",
+        testimonial1_rating: "5/5 • 2 weeks ago",
+        testimonial1_quote: "\"Our Morocco trip exceeded all expectations. The guide was passionate and knew every location’s history perfectly. The landscapes were breathtaking and the organization flawless. Our kids still talk about the desert night!\"",
+        tag_guide: "Expert Guide",
+        tag_family: "Family",
+        tag_sahara: "Sahara",
+        testimonial2_name: "Marc D.",
+        testimonial2_trip: "Solo Adventure • Fes & Atlas",
+        testimonial2_quote: "\"The desert excursion was magical. Sleeping under starry skies was unforgettable. The local team was exceptional.\"",
+        testimonial3_name: "Julie M.",
+        testimonial3_trip: "Couple • Casablanca & Coast",
+        testimonial3_quote: "\"Perfect organization! Every tour detail was designed to offer us an authentic and memorable experience.\"",
+        quote4: "\"Perfectly organized tour, very professional guide.\"",
+        name4: "Antoine B.",
+        quote5: "\"Unforgettable experience in the Atlas kasbahs.\"",
+        name5: "Marie C.",
+        quote6: "\"Warm welcome and authentic discoveries.\"",
+        name6: "David R.",
+        quote7: "\"Exceptional customer service—I highly recommend!\"",
+        name7: "Emma T.",
+        cta_title: "Ready for your Moroccan adventure?",
+        cta_desc: "Contact us today to design your custom itinerary and discover Morocco’s treasures.",
+        cta_btn1: "Contact Us",
+        cta_btn2: "Explore Our Tours",
+        support_time: "Response within 24h",
+        custom_tours: "Custom Tours",
+        local_guides: "Expert Local Guides",
+        footer_about: "Your travel agency specializing in custom Morocco tours for over 12 years.",
+        footer_quick_links: "Quick Links",
+        footer_contact: "Contact",
+        footer_address: "123 Medina Street, Marrakech, Morocco",
+        footer_phone: "+212 5 22 12 34 56",
+        footer_email: "info@enjoymarrakechtours.com",
+        footer_newsletter: "Subscribe",
+        footer_newsletter_desc: "Get our latest travel deals and tips by email.",
+        footer_email_placeholder: "Your email address",
+        footer_subscribe: "Subscribe",
+        footer_rights: "All rights reserved."
+      },
+      es: {
+        page_title: "Enjoy Marrakech Tours - Descubre el Marruecos auténtico",
+        nav_home: "Inicio",
+        nav_about: "Acerca de",
+        nav_packages: "Paquetes",
+        nav_gallery: "Galería",
+        nav_contact: "Contacto",
+        nav_home_mobile: "Inicio",
+        nav_about_mobile: "Acerca de",
+        nav_tours: "Circuitos",
+        nav_gallery_mobile: "Galería",
+        nav_contact_mobile: "Contacto",
+        from_marrakech: "Desde Marrakech",
+        from_fes: "Desde Fez",
+        from_casablanca: "Desde Casablanca",
+        hero_discover: "Descubre el",
+        hero_morocco: "Marruecos Auténtico",
+        hero_subtitle: "Viajes a medida y circuitos guiados para una experiencia inolvidable",
+        btn_discover: "Descubre nuestros circuitos",
+        btn_book_now: "Reservar ahora",
+        why_label: "Nuestras ventajas exclusivas",
+        why_title: "¿Por qué elegir nuestra agencia?",
+        why_desc: "Descubre lo que hace únicos nuestros circuitos y por qué nuestros clientes regresan año tras año para vivir nuevas aventuras",
+        feature1_title: "Circuitos a medida",
+        feature1_desc: "Itinerarios diseñados específicamente según tus deseos, presupuesto y ritmo de viaje",
+        feature1_detail1: "Consulta personalizada gratuita",
+        feature1_detail2: "Adaptación según tus restricciones",
+        feature1_detail3: "Modificaciones posibles durante el viaje",
+        feature2_title: "Guías locales expertos",
+        feature2_desc: "Guías marroquíes apasionados y certificados que comparten su cultura y saber ancestral",
+        feature2_detail1: "Guías certificados por la Oficina de Turismo",
+        feature2_detail2: "Multilingües (francés, inglés, árabe)",
+        feature2_detail3: "Especialistas en historia y tradiciones",
+        feature3_title: "Experiencias auténticas",
+        feature3_desc: "Descubre el verdadero Marruecos, lejos de los caminos trillados, con experiencias inmersivas únicas",
+        feature3_detail1: "Encuentros con comunidades locales",
+        feature3_detail2: "Talleres artesanales tradicionales",
+        feature3_detail3: "Alojamiento en casa de familias posible",
+        more_benefits: "Más ventajas exclusivas",
+        benefit1_title: "Seguro incluido",
+        benefit1_desc: "Protección completa durante tu viaje",
+        benefit2_title: "Soporte 24/7",
+        benefit2_desc: "Asistencia disponible en cualquier momento",
+        benefit3_title: "Calidad garantizada",
+        benefit3_desc: "Satisfacción del cliente al 98%",
+        benefit4_title: "Sorpresas incluidas",
+        benefit4_desc: "Pequeñas atenciones durante el viaje",
+        tours_label: "Descubre nuestros destinos",
+        tours_title: "Nuestros circuitos populares",
+        tours_desc: "Explora nuestros destinos más apreciados y déjate tentar por la aventura marroquí auténtica",
+        tour1_title: "Marrakech - Merzouga",
+        tour1_desc: "Descubre las magníficas dunas de Merzouga y pasa una noche inolvidable bajo las estrellas del Sahara.",
+        tour1_badge: "3 días / 2 noches",
+        tour1_feature1: "Atardecer mágico sobre las dunas de Merzouga",
+        tour1_feature2: "Noche en campamento tradicional en el corazón del Sahara",
+        tour1_feature3: "Excursión a lomo de dromedario en las dunas doradas",
+        tour2_title: "Marrakech – Cascadas de Ouzoud – Marrakech",
+        tour2_desc: "Salida de Marrakech hacia las cascadas de Ouzoud, joya natural en las montañas del Atlas Medio.",
+        tour2_badge: "1 día",
+        tour2_popular: "POPULAR",
+        tour2_feature1: "Descubrimiento de las majestuosas cascadas de Ouzoud",
+        tour2_feature2: "Senderismo panorámico alrededor de las cataratas",
+        tour2_feature3: "Encuentro con la naturaleza y monos bereberes",
+        tag_unesco: "Patrimonio UNESCO",
+        tag_culture: "Cultura",
+        tag_history: "Historia",
+        tour3_title: "Marrakech – Essaouira – Marrakech",
+        tour3_desc: "Explora Essaouira un día desde Marrakech, entre medina histórica, brisa marina y encanto auténtico.",
+        tour3_badge: "1 día",
+        tour3_feature1: "Paseo por la playa de Essaouira",
+        tour3_feature2: "Degustación de pescado fresco en el puerto",
+        tour3_feature3: "Descubrimiento de la medina declarada Patrimonio UNESCO",
+        tag_adventure: "Aventura",
+        tag_nature: "Naturaleza",
+        tag_camping: "Camping",
+        btn_details: "Ver detalles",
+        btn_reserve: "Reservar",
+        more_tours_title: "Más de 15 circuitos disponibles",
+        more_tours_desc: "Descubre todos nuestros itinerarios personalizados para explorar Marruecos según tus deseos",
+        btn_see_all: "Ver todos nuestros circuitos",
+        stats_label: "Excelencia certificada",
+        stats_title: "Nuestra experiencia en cifras",
+        stats_desc: "Años de experiencia al servicio de viajeros del mundo entero",
+        stat1_value: "12+",
+        stat1_label: "Años de experiencia",
+        stat1_desc: "Al servicio de viajeros desde 2013",
+        stat2_value: "2500+",
+        stat2_label: "Clientes satisfechos",
+        stat2_desc: "Viajeros satisfechos en todo el mundo",
+        stat3_value: "150+",
+        stat3_label: "Circuitos organizados",
+        stat3_desc: "Itinerarios variados y auténticos",
+        stat4_value: "98%",
+        stat4_label: "Tasa de satisfacción",
+        stat4_desc: "Calidad reconocida por nuestros clientes",
+        why_morocco_title: "¿Por qué elegir Marruecos?",
+        why_morocco_desc: "Un destino excepcional que ofrece una experiencia de viaje única y auténtica",
+        morocco_landscape: "Paisajes diversos",
+        morocco_landscape_desc: "Una geografía excepcional con una variedad de paisajes impresionantes",
+        m_land1: "Cadenas del Atlas con cumbres nevadas",
+        m_land2: "Desierto del Sahara y dunas de Merzouga",
+        m_land3: "Costas atlántica y mediterránea",
+        m_land4: "Oasis verdes y valles floridos",
+        morocco_culture: "Riqueza cultural",
+        morocco_culture_desc: "Una herencia milenaria preservada y viva que fascina a viajeros del mundo",
+        m_cult1: "Medinas imperiales declaradas Patrimonio UNESCO",
+        m_cult2: "Arquitectura islámica auténtica",
+        m_cult3: "Tradiciones artesanales ancestrales",
+        m_cult4: "Gastronomía refinada y especias",
+        morocco_hospitality: "Hospitalidad legendaria",
+        morocco_hospitality_desc: "La acogida cálida y generosa de los marroquíes hace inolvidable cada viaje",
+        m_hosp1: "Acogida familiar en riads",
+        m_hosp2: "Compartir té con menta",
+        m_hosp3: "Guías locales apasionados",
+        m_hosp4: "Experiencias auténticas compartidas",
+        trust_count: "Más de 2500 viajeros ya confían en nosotros",
+        testimonials_label: "Testimonios auténticos",
+        testimonials_title: "Lo que dicen nuestros clientes",
+        testimonials_desc: "Descubre los testimonios de viajeros que vivieron la experiencia con nuestra agencia",
+        testimonial1_name: "Sarah L.",
+        testimonial1_trip: "Viaje familiar • Marrakech y Sahara",
+        testimonial1_rating: "5/5 • Hace 2 semanas",
+        testimonial1_quote: "\"Nuestro viaje a Marruecos superó todas las expectativas. El guía era apasionado y conocía perfectamente la historia de cada lugar. Los paisajes eran impresionantes y la organización impecable. ¡Nuestros hijos aún hablan de la noche en el desierto!\"",
+        tag_guide: "Guía experto",
+        tag_family: "Familia",
+        tag_sahara: "Sahara",
+        testimonial2_name: "Marc D.",
+        testimonial2_trip: "Aventura en solitario • Fez y Atlas",
+        testimonial2_quote: "\"La excursión al desierto fue mágica. Dormir bajo un cielo estrellado fue inolvidable. El equipo local fue excepcional.\"",
+        testimonial3_name: "Julie M.",
+        testimonial3_trip: "Pareja • Casablanca y Costa",
+        testimonial3_quote: "\"¡Organización perfecta! Cada detalle del circuito estaba pensado para ofrecernos una experiencia auténtica y memorable.\"",
+        quote4: "\"Circuito perfectamente organizado, guía muy profesional.\"",
+        name4: "Antoine B.",
+        quote5: "\"Experiencia inolvidable en las kasbahs del Atlas.\"",
+        name5: "Marie C.",
+        quote6: "\"Recepción cálida y descubrimientos auténticos.\"",
+        name6: "David R.",
+        quote7: "\"¡Servicio al cliente excepcional, lo recomiendo mucho!\"",
+        name7: "Emma T.",
+        cta_title: "¿Listo para tu aventura marroquí?",
+        cta_desc: "Contáctanos hoy para crear tu itinerario personalizado y descubrir los tesoros de Marruecos.",
+        cta_btn1: "Contáctanos",
+        cta_btn2: "Explorar nuestros circuitos",
+        support_time: "Respuesta en 24h",
+        custom_tours: "Circuitos personalizados",
+        local_guides: "Guías expertos locales",
+        footer_about: "Tu agencia de viajes especializada en circuitos personalizados en Marruecos desde hace más de 12 años.",
+        footer_quick_links: "Enlaces rápidos",
+        footer_contact: "Contacto",
+        footer_address: "123 Calle de la Medina, Marrakech, Marruecos",
+        footer_phone: "+212 5 22 12 34 56",
+        footer_email: "info@enjoymarrakechtours.com",
+        footer_newsletter: "Suscríbete",
+        footer_newsletter_desc: "Recibe nuestras últimas ofertas y consejos de viaje por email.",
+        footer_email_placeholder: "Tu dirección de email",
+        footer_subscribe: "Suscribirse",
+        footer_rights: "Todos los derechos reservados."
+      }
+    };
+
+    let currentLang = 'fr';
+
+    function setLanguage(lang) {
+      if (!translations[lang]) return;
+      currentLang = lang;
+
+      document.querySelectorAll('[data-translate]').forEach(el => {
+        const key = el.getAttribute('data-translate');
+        if (translations[lang][key] !== undefined) {
+          if (el.tagName === 'INPUT' && el.hasAttribute('placeholder')) {
+            el.placeholder = translations[lang][key];
+          } else {
+            const txt = translations[lang][key];
+            if (txt.includes('<') && txt.includes('>')) {
+              el.innerHTML = txt;
+            } else {
+              el.textContent = txt;
+            }
+          }
+        }
+      });
+
+      document.querySelectorAll('.current-language').forEach(el => {
+        el.textContent = lang.toUpperCase();
+      });
+
+      document.documentElement.lang = lang;
+      localStorage.setItem('preferredLanguage', lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Load saved language
+      const saved = localStorage.getItem('preferredLanguage');
+      if (saved && translations[saved]) {
+        setLanguage(saved);
+      }
+
+      // Desktop language switch
+      document.querySelectorAll('.language-option[data-lang]').forEach(opt => {
+        opt.addEventListener('click', function () {
+          const lang = this.getAttribute('data-lang');
+          setLanguage(lang);
+          document.querySelectorAll('.language-option').forEach(o => o.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      // Mobile language
+      const mobileLangOptions = document.querySelectorAll('#mobile-language-options .language-option[data-lang]');
+      mobileLangOptions.forEach(opt => {
+        opt.addEventListener('click', function () {
+          const lang = this.getAttribute('data-lang');
+          setLanguage(lang);
+          mobileLangOptions.forEach(o => o.classList.remove('active'));
+          this.classList.add('active');
+          document.getElementById('mobile-language-options').classList.remove('show');
+          const btn = document.getElementById('mobile-language-button');
+          if (btn?.querySelector('.fa-chevron-down')) {
+            btn.querySelector('.fa-chevron-down').classList.remove('rotate-180');
+          }
+        });
+      });
+
+      // === Original behavior: navbar, mobile menu, etc. ===
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+          navbar.classList.remove('navbar-default');
+          navbar.classList.add('navbar-scrolled');
+        } else {
+          navbar.classList.remove('navbar-scrolled');
+          navbar.classList.add('navbar-default');
+        }
+      });
+
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileToursButton = document.getElementById('mobile-tours-button');
+      const mobileToursContent = document.getElementById('mobile-tours-content');
+      const mobileLanguageButton = document.getElementById('mobile-language-button');
+      const mobileLanguageOptions = document.getElementById('mobile-language-options');
+
+      mobileMenuButton?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+      mobileToursButton?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileToursContent?.classList.toggle('hidden');
+        mobileToursButton.querySelector('.fa-chevron-down')?.classList.toggle('rotate-180');
+      });
+
+      mobileLanguageButton?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileLanguageOptions?.classList.toggle('show');
+        mobileLanguageButton.querySelector('.fa-chevron-down')?.classList.toggle('rotate-180');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          if (!mobileToursContent.classList.contains('hidden')) {
+            mobileToursContent.classList.add('hidden');
+            mobileToursButton.querySelector('.fa-chevron-down')?.classList.remove('rotate-180');
+          }
+          if (mobileLanguageOptions.classList.contains('show')) {
+            mobileLanguageOptions.classList.remove('show');
+            mobileLanguageButton.querySelector('.fa-chevron-down')?.classList.remove('rotate-180');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
